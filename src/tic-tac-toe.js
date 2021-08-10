@@ -14,14 +14,14 @@ class TicTacToe {
 
     nextTurn(rowIndex, columnIndex) {
         //change current player, update marks storage etc.          
-        //if (this.isFinished()) return `Game is finished already. Winner is ${this.currentPlayer}`
+        if (this.isFinished()) return `Game is finished already. Winner is ${this.currentPlayer}`
         //if (noMoreTurns()) return 'no more turns';
         if(this.matrix[rowIndex][columnIndex] !== null) return `this area is not empty`
         this.matrix[rowIndex][columnIndex] = this.currentPlayer;
         
         
         this.getWinner()
-        this.isDraw();
+        //this.isDraw();
         this.currentPlayer = (this.currentPlayer === 'x') ? 'o' : 'x';
         return 
     }
