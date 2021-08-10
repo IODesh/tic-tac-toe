@@ -17,9 +17,7 @@ class TicTacToe {
         if (this.isFinished()) return `Game is finished already. Winner is ${this.currentPlayer}`
         //if (noMoreTurns()) return 'no more turns';
         if(this.matrix[rowIndex][columnIndex] !== null) return `this area is not empty`
-        this.matrix[rowIndex][columnIndex] = this.currentPlayer;
-        
-        
+        this.matrix[rowIndex][columnIndex] = this.currentPlayer;                
         this.getWinner()
         //this.isDraw();
         this.currentPlayer = (this.currentPlayer === 'x') ? 'o' : 'x';
@@ -44,8 +42,7 @@ class TicTacToe {
             || this.matrix[0][2] == this.currentPlayer && this.matrix[1][2] == this.currentPlayer && this.matrix[2][2] == this.currentPlayer
         ) {
             this.winner = this.currentPlayer;        
-        }
-        
+        }        
         return this.winner;
     }
 
