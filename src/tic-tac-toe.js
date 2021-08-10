@@ -43,10 +43,9 @@ class TicTacToe {
             || this.matrix[0][1] == this.currentPlayer && this.matrix[1][1] == this.currentPlayer && this.matrix[2][1] == this.currentPlayer
             || this.matrix[0][2] == this.currentPlayer && this.matrix[1][2] == this.currentPlayer && this.matrix[2][2] == this.currentPlayer
         ) {
-            this.winner = this.currentPlayer;
-            return this.winner;
+            this.winner = this.currentPlayer;        
         }
-        this.winner = null;
+        
         return this.winner;
     }
 
