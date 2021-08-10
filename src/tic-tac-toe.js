@@ -46,7 +46,8 @@ class TicTacToe {
             this.winner = this.currentPlayer;
             return this.winner;
         }
-        
+        this.winner = null;
+        return this.winner;
     }
 
     noMoreTurns() {
