@@ -14,8 +14,8 @@ class TicTacToe {
 
     nextTurn(rowIndex, columnIndex) {
         //should properly update class state (change current player, update marks storage etc.)
-        this.matrix[rowIndex][columnIndex] = this.currentPlayer;
         this.currentPlayer = (this.currentPlayer === 'x') ? 'o' : 'x';
+        this.matrix[rowIndex][columnIndex] = this.currentPlayer;
         return 
     }
 
