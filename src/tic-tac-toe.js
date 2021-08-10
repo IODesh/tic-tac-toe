@@ -36,7 +36,7 @@ class TicTacToe {
             || this.matrix[0][1] == this.currentPlayer && this.matrix[1][1] == this.currentPlayer && this.matrix[2][1] == this.currentPlayer
             || this.matrix[0][2] == this.currentPlayer && this.matrix[1][2] == this.currentPlayer && this.matrix[2][2] == this.currentPlayer
         ) {
-            this.winner = this.currentPlayer;
+            this.winner = getCurrentPlayerSymbol();
             return this.winner;
         }
         else {return null};
@@ -55,7 +55,7 @@ class TicTacToe {
 
     getFieldValue(rowIndex, colIndex) {
     //should return matrix[row][col] value (if any) or null
-    return (this.noMoreTurns()) ? null : this.matrix[rowIndex][colIndex]
+    return this.matrix[rowIndex][colIndex]
     }
 }
 
