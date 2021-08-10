@@ -55,7 +55,7 @@ class TicTacToe {
 
     getFieldValue(rowIndex, colIndex) {
     //should return matrix[row][col] value (if any) or null
-    let value = this.matrix[rowIndex][colIndex]
+    let value = this.matrix[rowIndex][colIndex];
     return value
     }
 }
