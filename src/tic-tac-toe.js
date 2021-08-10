@@ -18,7 +18,7 @@ class TicTacToe {
         if (noMoreTurns()) return 'no more turns';
         if(this.matrix[rowIndex][columnIndex] !== null) return `this area is not empty`
         this.matrix[rowIndex][columnIndex] = this.currentPlayer;
-        this.getWinner()
+        //this.getWinner()
         this.isDraw();
         this.currentPlayer = (this.currentPlayer === 'x') ? 'o' : 'x';
         return 
