@@ -9,13 +9,14 @@ class TicTacToe {
 
     getCurrentPlayerSymbol() {
         //should return x or o
-        return this.currentPlayer
+        return this.currentPlayer;
     }
 
     nextTurn(rowIndex, columnIndex) {
         //should properly update class state (change current player, update marks storage etc.)
         this.matrix[rowIndex][columnIndex] = this.getCurrentPlayerSymbol()
-        this.currentPlayer = (this.getCurrentPlayerSymbol() === 'x') ? 'o' : 'x'
+        this.currentPlayer = (this.currentPlayer === 'x') ? 'o' : 'x'
+        return this.matrix
     }
 
     isFinished() {
@@ -38,6 +39,7 @@ class TicTacToe {
             this.winner = this.currentPlayer;
             return this.winner;
         }
+        return null;
     }
 
     noMoreTurns() {
@@ -47,7 +49,7 @@ class TicTacToe {
 
     isDraw() {
         //should return true if there is no more turns and no winner
-        return (this.noMoreTurns() && this.winner === null) ? true : false
+        return ((this.noMoreTurns()) && this.winner === null) ? true : false
 
     }
 
